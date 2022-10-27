@@ -26,3 +26,5 @@ COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "Ecom.Cart.Service.dll"]
 EXPOSE 5005
 EXPOSE 5004
+
+LABEL org.opencontainers.image.source="https://github.com/isajidh/iphonemax_cart_service"
