@@ -23,7 +23,8 @@ RUN dotnet publish "Ecom.Cart.Service.csproj" -c Release -o /app/publish /p:UseA
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "Ecom.Cart.Service.dll"]
+#Disabled to test in the app in the producttion environment
+# ENTRYPOINT ["dotnet", "Ecom.Cart.Service.dll"]
 EXPOSE 5005
 EXPOSE 5004
 
